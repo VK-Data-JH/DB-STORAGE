@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  dwh_db_prod:
+    container_name: dwh_db_prod
+    image: aas_dwh_storage_db
+    restart: always
+    ports:
+      - 6232:5432
+    volumes:
+      - dwh_db_prod_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=ambica_prod
+      - POSTGRES_DB=dwh
+  dwh_db_test:
+    container_name: dwh_db_test
+    image: aas_dwh_storage_db
+    restart: always
+    ports:
+      - 6233:5432
+    volumes:
+      - dwh_db_test_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=ambica_test
+      - POSTGRES_DB=dwh
+  dwh_db_dev:
+    container_name: dwh_db_dev
+    image: aas_dwh_storage_db
+    restart: always
+    ports:
+      - 6234:5432
+    volumes:
+      - dwh_db_dev_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=ambica_dev
+      - POSTGRES_DB=dwh
+volumes: 
+  dwh_db_prod_data:
+  dwh_db_test_data:
+  dwh_db_dev_data:
+
+    

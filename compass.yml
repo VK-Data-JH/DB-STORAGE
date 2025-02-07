@@ -1,0 +1,22 @@
+name: ambica-sro/AAS_DWH_storage_DB
+id: 'ari:cloud:compass:33ae3e0d-d13c-4e00-8128-31fc99d8769c:component/01bb2345-1798-4abb-a977-2b649d6b1f8b/1df472df-bc15-4a4d-b4c6-d60b9084c03b'
+description: Imported from a GitHub repository linked to the Adaptivní alerting Jira Software project.
+configVersion: 1
+typeId: SERVICE
+ownerId: 'ari:cloud:teams::team/6628f1d5-479b-41ff-8a69-6c9ee5aca348'
+fields:
+  tier: 4
+links:
+  - name: ambica-sro/AAS_DWH_storage_DB
+    type: REPOSITORY
+    url: 'https://github.com/ambica-sro/AAS_DWH_storage_DB'
+  - name: Adaptivní alerting
+    type: PROJECT
+    url: 'https://ambica.atlassian.net/browse/AA'
+relationships: {}
+labels:
+  - jira-import
+customFields: null
+
+# Learn more about formatting compass.yml:
+# https://go.atlassian.com/compass-yml-format
